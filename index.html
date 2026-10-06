@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Harikrishnan &amp; Devika — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ballet&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div id="opening" class="opening" aria-label="Wedding invitation opening">
+    <div class="opening-stage">
+      <video id="openingVideo" class="opening-video" playsinline preload="auto">
+        <source src="./assets/openingg.mp4" type="video/mp4" />
+      </video>
+      <div class="opening-shade"></div>
+      <div class="opening-title">
+        <div class="monogram">H&amp;D</div>
+        <div class="opening-subtitle">Wedding Invitation</div>
+      </div>
+      <button id="sealButton" class="seal-button" aria-label="Tap the wax seal to open"></button>
+      <div id="tapText" class="tap-text">Tap the seal to open</div>
+    </div>
+  </div>
+
+  <audio id="bgm" src="./assets/backround.mp3" loop preload="auto"></audio>
+
+  <div class="floating-decor" aria-hidden="true">
+    <span class="petal p1">✦</span><span class="petal p2">✿</span><span class="petal p3">•</span>
+    <span class="petal p4">✦</span><span class="petal p5">•</span><span class="petal p6">✿</span>
+    <span class="petal p7">•</span><span class="petal p8">✦</span><span class="petal p9">✿</span>
+  </div>
+
+  <main id="invitation" class="invitation" aria-hidden="true">
+    <section class="hero section reveal">
+      <div class="ganesha-wrap">
+        <img class="ganesha"
+          src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/may/Hemadri%20%26%20Ravindra/GAnesha%20Icon.png"
+          alt="Lord Ganesha" />
+      </div>
+      <p class="blessing-quote">May our hearts be united as waters in a river, and may our lives be bound together in
+        truth, harmony, and enduring love</p>
+      <p class="invite-copy">With the blessings of the Almighty and our beloved families,<br>we joyfully invite you to
+        grace the wedding of</p>
+      <div class="couple-block">
+        <div class="person">
+          <div class="couple-name">Harikrishnan G</div>
+          <div class="parent-line">S/o Mr. GopalakrishnaPillai &amp; Mrs. SandhayaDevi</div>
+        </div>
+        <div class="ampersand">&amp;</div>
+        <div class="person">
+          <div class="couple-name">Devika G.K</div>
+          <div class="parent-line">D/o Mr. Gopinath &amp; Mrs. Pushkala</div>
+        </div>
+      </div>
+      <div class="scroll-cue">Scroll to Reveal <span>↓</span></div>
+    </section>
+
+    <section class="section date-section reveal">
+      <p class="eyebrow">The Date</p>
+      <h2>Save the Date</h2>
+      <p class="section-intro">Tap below to reveal our wedding date</p>
+      <div class="reveal-grid">
+        <button class="reveal-card" data-reveal aria-label="Tap to reveal month">
+          <div class="reveal-content"><span class="label">Month</span><strong>April</strong></div>
+          <div class="scratch-cover"><span>Month</span><small>↑ TAP</small></div>
+        </button>
+        <button class="reveal-card" data-reveal aria-label="Tap to reveal day">
+          <div class="reveal-content"><span class="label">Day</span><strong>25</strong></div>
+          <div class="scratch-cover"><span>Day</span><small>↑ TAP</small></div>
+        </button>
+        <button class="reveal-card" data-reveal aria-label="Tap to reveal year">
+          <div class="reveal-content"><span class="label">Year</span><strong>2027</strong></div>
+          <div class="scratch-cover"><span>Year</span><small>↑ TAP</small></div>
+        </button>
+      </div>
+      <p class="date-line">A new chapter, woven with two hearts and the blessings of family</p>
+      <p class="location-line">Kalyanam&nbsp; 25 · 04 · 2027 · Ayoor</p>
+      <div id="countdown" class="countdown" aria-label="Countdown to wedding">
+        <div><strong id="days">00</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="mins">00</strong><span>Mins</span></div>
+        <div><strong id="secs">00</strong><span>Secs</span></div>
+      </div>
+      <div id="celebrationBurst" class="celebration-burst" aria-hidden="true"></div>
+    </section>
+
+    <section class="section story-section reveal">
+      <p class="eyebrow">Our Story</p>
+      <h2>Our Little<br>Story</h2>
+      <p class="story-lead">Two hearts, two families, one beautiful beginning — and a new chapter waiting to unfold.</p>
+      <div class="story-frame">
+        <div id="storyTrack" class="story-track">
+          <img src="./assets/story-01.png" alt="Our story — chapter 1" draggable="false">
+          <img src="./assets/story-02.png" alt="Our story — chapter 2" draggable="false">
+          <img src="./assets/story-03.png" alt="Our story — chapter 3" draggable="false">
+          <img src="./assets/story-05.png" alt="Our story — chapter 4" draggable="false">
+        </div>
+      </div>
+      <div class="story-controls">
+        <button id="storyPrev" class="story-btn" aria-label="Previous story photo">←</button>
+        <div class="story-meta"><span id="storyCount">01 / 04</span><span>swipe or tap to continue</span></div>
+        <button id="storyNext" class="story-btn" aria-label="Next story photo">→</button>
+      </div>
+    </section>
+
+    <section class="section ceremonies reveal">
+      <p class="eyebrow">The Celebrations Unfold</p>
+      <h2>Sacred Ceremonies</h2>
+
+      <article class="event-card">
+        <div class="day-divider" aria-label="Wedding"><span></span><b>Wedding</b></div>
+        <img class="event-video" src="./assets/wedding.png" alt="Wedding celebration" loading="lazy">
+        <div class="event-info-card wedding-info">
+          <div class="event-kicker">Sunday · 25 April 2027</div>
+          <h3>Wedding</h3>
+          <p class="event-time">10:30 AM onwards</p>
+          <p class="venue">Aiswarya Convention Center<br>Ayoor</p>
+          <a class="map-link" target="_blank" rel="noopener" href="https://maps.app.goo.gl/BK1Wybm2xCRMRKbj8">⌖ &nbsp;
+            View on Map</a>
+          <div class="mini-schedule">
+            <div><span>10:30 AM</span><b>Welcoming</b></div>
+            <div><span>11:56 AM — 12:19 PM</span><b>Muhurtham</b></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="day-divider" aria-label="Reception"><span></span><b>Reception</b></div>
+        <img class="event-video" src="./assets/reception.png" alt="Reception celebration" loading="lazy">
+        <div class="event-info-card reception-info">
+          <div class="event-kicker">Sunday · 25 April 2027</div>
+          <h3>Reception</h3>
+          <p class="event-time">From 4:30 PM onwards</p>
+          <p class="venue">Home<br>Chadayamanagalam</p>
+          <a class="map-link" target="_blank" rel="noopener" href="https://maps.app.goo.gl/wXSyPe3y3bCjzJzp9">⌖ &nbsp;
+            View on Map</a>
+          <div class="mini-schedule">
+            <div><span>4:30 PM</span><b>Welcoming</b></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section closing reveal">
+      <div class="om">ॐ</div>
+      <p>Bound by sacred vows, blessed by two loving families, and graced by the Almighty —<br>we begin our forever with
+        grateful, joyful hearts.</p>
+      <p>We cannot wait to celebrate this beautiful chapter with you.</p>
+      <div class="closing-names">Hari &amp; Devika</div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-love">Made with love by</div>
+      <div class="footer-monogram">H &amp; D</div>
+    </footer>
+  </main>
+
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="Turn music off" aria-pressed="true">
+    <span class="music-icon" aria-hidden="true">♪</span>
+    <span id="musicLabel">Music On</span>
+  </button>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

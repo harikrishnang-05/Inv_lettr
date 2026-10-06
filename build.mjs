@@ -1,0 +1,7 @@
+import { cp, mkdir } from 'node:fs/promises';
+
+await mkdir('dist', { recursive: true });
+for (const path of ['index.html', 'css', 'js', 'assets']) {
+  await cp(path, `dist/${path}`, { recursive: true });
+}
+console.log('Website copied to dist.');
