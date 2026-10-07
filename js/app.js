@@ -6,25 +6,21 @@ const tapText = document.getElementById('tapText');
 const invitation = document.getElementById('invitation');
 const bgm = document.getElementById('bgm');
 const floatingDecor = document.querySelector('.floating-decor');
-const musicControls = document.getElementById('musicControls');
-const musicToggleBtn = document.getElementById('musicToggleBtn');
+const musicToggle = document.getElementById('musicToggle');
 const musicLabel = document.getElementById('musicLabel');
-const volumeSlider = document.getElementById('volumeSlider');
 
 // --- Audio Controller ---
 let musicOn = true;
 
 function updateMusicControl() {
-  if (!musicControls) return;
-  musicControls.classList.toggle('off', !musicOn);
-  if (musicToggleBtn) {
-    musicToggleBtn.setAttribute('aria-pressed', String(musicOn));
-    musicToggleBtn.setAttribute('aria-label', musicOn ? 'Turn music off' : 'Turn music on');
-  }
+  if (!musicToggle) return;
+  musicToggle.classList.toggle('off', !musicOn);
+  musicToggle.setAttribute('aria-pressed', String(musicOn));
+  musicToggle.setAttribute('aria-label', musicOn ? 'Turn music off' : 'Turn music on');
   if (musicLabel) musicLabel.textContent = musicOn ? 'Music On' : 'Music Off';
 }
 
-musicToggleBtn?.addEventListener('click', async () => {
+musicToggle?.addEventListener('click', async () => {
   if (musicOn) {
     bgm.pause();
     musicOn = false;
@@ -34,11 +30,6 @@ musicToggleBtn?.addEventListener('click', async () => {
   }
   updateMusicControl();
 });
-
-volumeSlider?.addEventListener('input', (e) => {
-  if (bgm) bgm.volume = e.target.value;
-});
-
 updateMusicControl();
 
 // --- Invitation Opening Flow ---
@@ -47,7 +38,7 @@ function enterInvitation() {
   invitation.classList.add('show');
   invitation.setAttribute('aria-hidden', 'false');
   floatingDecor.classList.add('active');
-  if (musicControls) musicControls.classList.add('visible');
+  if (musicToggle) musicToggle.classList.add('visible');
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
